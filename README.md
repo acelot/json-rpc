@@ -1,4 +1,4 @@
-JSON-RCP 2.0 Server for PHP 5.3
+JSON-RPC 2.0 Server for PHP 5.3
 ==========
 
 # Usage
