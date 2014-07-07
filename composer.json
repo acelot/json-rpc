@@ -1,0 +1,21 @@
+{
+    "name": "acelot/json-rpc",
+    "description": "JSON-RPC 2.0 server for PHP",
+    "version": "0.1.0",
+    "type": "library",
+    "keywords": ["json-rpc", "server"],
+    "homepage": "https://github.com/acelot/json-rpc",
+    "license" : "MIT",
+    "authors": [
+        {
+            "name": "Valeriy Protopopov",
+            "email": "provaleriy@gmail.com",
+            "homepage": "http://www.valeriy.pro"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Acelot\\JsonRpc\\": "src/"
+        }
+    }
+}

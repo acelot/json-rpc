@@ -1,0 +1,13 @@
+# IDE
+.idea/
+
+# NPM
+node_modules/
+npm-debug.log
+
+# Composer
+vendor/
+
+# Misc
+*.lock
+!.gitkeep
