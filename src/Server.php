@@ -15,13 +15,12 @@ use Acelot\JsonRpc\Transport\PhpInput;
 class Server
 {
     const PROTOCOL_VERSION = '2.0';
-
     const ERROR_INTERNAL = -32603;
     const ERROR_METHOD = -32601;
     const ERROR_PARAMS = -32602;
 
     /**
-     * @var \stdClass
+     * @var object
      */
     protected $service;
 
@@ -31,7 +30,7 @@ class Server
     protected $transport;
 
     /**
-     * @param \stdClass $class
+     * @param object $class
      * @param TransportInterface $transport
      */
     public function __construct($service, TransportInterface $transport = null)
@@ -94,6 +93,10 @@ class Server
         return !isset($data['jsonrpc']);
     }
 
+    /**
+     * @param array $batch
+     * @return array
+     */
     protected function executeBatch(array $batch)
     {
         $response = array();

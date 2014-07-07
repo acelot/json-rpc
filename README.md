@@ -2,7 +2,6 @@ JSON-RPC 2.0 Server for PHP 5.3
 ==========
 
 # Usage
----
 
 ```php
 /*

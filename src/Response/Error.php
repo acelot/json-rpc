@@ -5,6 +5,10 @@ namespace Acelot\JsonRpc\Response;
 use Acelot\JsonRpc\ResponseAbstract;
 use Acelot\JsonRpc\ResponseInterface;
 
+/**
+ * Class Error
+ * @package Acelot\JsonRpc\Response
+ */
 class Error extends ResponseAbstract implements ResponseInterface
 {
     /**
@@ -23,10 +27,10 @@ class Error extends ResponseAbstract implements ResponseInterface
     protected $data;
 
     /**
-     * @param int $code
-     * @param string $message
-     * @param mixed $data
-     * @param int|string $id
+     * @param int        $code    A Number that indicates the error type that occurred
+     * @param string     $message A String providing a short description of the error
+     * @param mixed      $data    A Primitive or Structured value that contains additional information about the error
+     * @param int|string $id      Request ID
      */
     public function __construct($code, $message = null, $data = null, $id = null)
     {

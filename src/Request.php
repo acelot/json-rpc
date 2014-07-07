@@ -4,6 +4,10 @@ namespace Acelot\JsonRpc;
 
 use Acelot\JsonRpc\Exception\RequestException;
 
+/**
+ * Class Request
+ * @package Acelot\JsonRpc
+ */
 class Request
 {
     /**
@@ -17,14 +21,14 @@ class Request
     protected $params;
 
     /**
-     * @var string|int|null
+     * @var int|string
      */
     protected $id;
 
     /**
-     * @param $method
-     * @param array $params
-     * @param null $id
+     * @param string     $method A String containing the name of the method to be invoked
+     * @param array      $params A Structured value that holds the parameter values to be used during the invocation of the method
+     * @param int|string $id     Request ID
      */
     public function __construct($method = null, $params = array(), $id = null)
     {
@@ -83,7 +87,7 @@ class Request
     }
 
     /**
-     * @param string|int|null $id
+     * @param int|string $id
      */
     public function setId($id)
     {
@@ -91,23 +95,10 @@ class Request
     }
 
     /**
-     * @return string|int|null
+     * @return int|string
      */
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * @return array
-     */
-    public function getJson()
-    {
-        return array(
-            'jsonrpc' => self::PROTOCOL_VERSION,
-            'method'  => $this->getMethod(),
-            'params'  => $this->getParams(),
-            'id'      => $this->getId()
-        );
     }
 }

@@ -4,6 +4,10 @@ namespace Acelot\JsonRpc\Transport;
 
 use Acelot\JsonRpc\TransportInterface;
 
+/**
+ * Class PhpInput
+ * @package Acelot\JsonRpc\Transport
+ */
 class PhpInput implements TransportInterface
 {
     public function read()

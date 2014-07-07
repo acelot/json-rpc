@@ -2,6 +2,10 @@
 
 namespace Acelot\JsonRpc;
 
+/**
+ * Interface ResponseInterface
+ * @package Acelot\JsonRpc
+ */
 interface ResponseInterface
 {
     /**
